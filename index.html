@@ -2,9 +2,25 @@
 <html lang="en">
 
 <head>
-  <title>MERCI Youth Ministry</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Marikina Evangelical Reform Church</title>
+
+  <!-- 🔥 Website Thumbnail / Favicon -->
+  <link rel="icon" type="image/png" href="photo.jpg">
+
+  <!-- 🔥 Social Media Preview -->
+  <meta property="og:title" content="Marikina Evangelical Reform Church">
+  <meta property="og:description" content="A Christ-centered youth Church community growing in faith and love.">
+  <meta property="og:image" content="https://carlosacro207-star.github.io/merci-youth-ministry/photo.jpg">
+  <meta property="og:type" content="website">
 
   <style>
+    html {
+      scroll-behavior: smooth;
+    }
+
     body {
       margin: 0;
       font-family: Arial, sans-serif;
@@ -12,38 +28,65 @@
       color: white;
     }
 
-    .hero {
+    /* 🔥 NAVBAR */
+    nav {
+      position: fixed;
+      width: 100%;
+      padding: 15px;
+      background: rgba(0,0,0,0.7);
       text-align: center;
-      padding: 60px 20px;
+      z-index: 1000;
+      backdrop-filter: blur(10px);
+    }
+
+    nav a {
+      color: white;
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+
+    nav a:hover {
+      color: red;
+    }
+
+    /* HERO */
+    .hero {
+      min-height: 100vh;
+      text-align: center;
+      padding: 120px 20px 60px;
       background: linear-gradient(to bottom, #111, #000);
     }
 
     .hero img {
-      width: 180px;
+      width: 90%;
+      max-width: 800px;
       border-radius: 20px;
       margin-top: 20px;
+      box-shadow: 0 0 20px rgba(255,0,0,0.3);
     }
 
     h1 {
-      font-size: 40px;
+      font-size: 50px;
       margin: 10px 0;
     }
 
     .tagline {
       color: #bbb;
-      font-size: 16px;
+      font-size: 18px;
     }
 
     .section {
-      padding: 40px 20px;
+      padding: 60px 20px;
       text-align: center;
     }
 
     .card {
       background: #1a1a22;
-      padding: 20px;
-      margin: 15px auto;
-      max-width: 500px;
+      padding: 25px;
+      margin: 20px auto;
+      max-width: 700px;
       border-radius: 15px;
       box-shadow: 0 0 10px rgba(255, 0, 0, 0.2);
     }
@@ -51,6 +94,7 @@
     .verse {
       color: #ff4d4d;
       font-weight: bold;
+      font-size: 20px;
     }
 
     button {
@@ -61,10 +105,13 @@
       border-radius: 10px;
       cursor: pointer;
       margin-top: 15px;
+      transition: 0.3s;
+      font-size: 16px;
     }
 
     button:hover {
       background: darkred;
+      transform: scale(1.05);
     }
 
     a {
@@ -76,15 +123,15 @@
     .form-card {
       background: #1a1a22;
       padding: 25px;
-      margin: 15px auto;
-      max-width: 500px;
+      margin: 20px auto;
+      max-width: 600px;
       border-radius: 15px;
       text-align: left;
     }
 
     input, textarea {
       width: 100%;
-      padding: 10px;
+      padding: 12px;
       margin-top: 8px;
       margin-bottom: 15px;
       border: none;
@@ -96,7 +143,7 @@
 
     textarea {
       resize: none;
-      height: 100px;
+      height: 120px;
     }
 
     footer {
@@ -106,83 +153,146 @@
       color: #777;
       font-size: 12px;
     }
+
+    @media (max-width: 768px) {
+      h1 {
+        font-size: 35px;
+      }
+
+      .tagline {
+        font-size: 15px;
+      }
+
+      nav a {
+        margin: 0 8px;
+        font-size: 14px;
+      }
+    }
   </style>
 </head>
 
 <body>
 
+  <!-- 🔥 NAVIGATION -->
+  <nav>
+    <a href="#">Home</a>
+    <a href="#about">About</a>
+    <a href="#verse">Verse</a>
+    <a href="#join">Join</a>
+  </nav>
+
   <!-- HERO -->
   <div class="hero">
-    <h1>MERCI Youth Ministry</h1>
-    <p class="tagline">A Church that follows Christ & shares His Gospel</p>
 
-    <img src="https://cdn.pixabay.com/photo/2024/08/25/16/28/anime-8937387_960_720.jpg" alt="anime boy">
+    <h1>MERCI Youth MinistryMarikina Evangelical Reform Church</h1>
+
+    <p class="tagline">
+      A Church that follows Christ & shares His Gospel
+    </p>
+
+    <!-- 🔥 YOUR REAL PHOTO -->
+    <img
+      src="photo.jpg"
+      alt="MERCI Youth MinistryMarikina Evangelical Reform Church"
+    >
 
     <br>
-    <button onclick="alert('Welcome to Marikina Evangelical Reform Church! 🙏')">Join Us</button>
+
+    <button onclick="alert('Welcome to Marikina Evangelical Reform Church! 🙏')">
+      Join Us
+    </button>
+
   </div>
 
   <!-- ABOUT -->
-  <div class="section">
+  <div class="section" id="about">
 
     <div class="card">
       <h2>About Us</h2>
+
       <p>
         We are a Christ-centered Church community dedicated to faith,
-        friendship, and growing together in God's Word.
+        friendship, leadership, and growing together in God's Word.
       </p>
     </div>
 
+  </div>
+
+  <!-- BIBLE VERSE -->
+  <div class="section" id="verse">
+
     <div class="card">
       <h2>📖 Bible Verse</h2>
-      <p class="verse">Proverbs 3:5–6</p>
+
+      <p class="verse">
+        Proverbs 3:5–6
+      </p>
+
       <p>
         Trust in the Lord with all your heart and lean not on your own understanding.
         In all your ways acknowledge Him, and He will make your paths straight.
       </p>
     </div>
 
+  </div>
+
+  <!-- CONNECT -->
+  <div class="section">
+
     <div class="card">
-      <h2>📺 Connect</h2>
+      <h2>📺 Connect With Us</h2>
+
       <p>
         <a href="https://www.youtube.com/@marikinareformedchurch" target="_blank">
-          Visit our Church YouTube Channel
+          Visit our YouTube Channel
         </a>
       </p>
     </div>
 
-  <!-- 🔥 JOIN US FORM -->
-<div class="form-card">
-  <h2>🙏 Message us for more information about our Church</h2>
+  </div>
 
-  <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+  <!-- 🔥 JOIN FORM -->
+  <div class="section" id="join">
 
-    <label>
-      Your email:
-      <input
-        type="email"
-        name="email"
-        placeholder="Enter your email"
-        required
-      >
-    </label>
+    <div class="form-card">
 
-    <label>
-      Your message:
-      <textarea
-        name="message"
-        placeholder="Tell us about yourself..."
-        required
-      ></textarea>
-    </label>
-        <button type="submit">Send</button>
+      <h2>🙏 Message Our Church For More Information</h2>
+
+      <!-- 🔥 REPLACE YOUR_FORM_ID -->
+      <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+
+        <label>
+          Your Email:
+          <input
+            type="email"
+            name="email"
+            placeholder="Enter your email"
+            required
+          >
+        </label>
+
+        <label>
+          Your Message:
+          <textarea
+            name="message"
+            placeholder="Tell us about yourself..."
+            required
+          ></textarea>
+        </label>
+
+        <button type="submit">
+          Send Message
+        </button>
+
       </form>
+
     </div>
 
   </div>
 
+  <!-- FOOTER -->
   <footer>
-    MERCI Youth Ministry © 2026 | Built by Carlo Sacro
+    Marikina Evangelical Reform Church © 2026 | Built by Carlo Sacro
   </footer>
 
 </body>
