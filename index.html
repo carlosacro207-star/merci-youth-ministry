@@ -7,16 +7,17 @@
 
   <title>Marikina Evangelical Reform Church</title>
 
-  <!-- 🔥 Website Thumbnail / Favicon -->
-  <link rel="icon" type="image/png" href="photo.jpg">
+  <!-- 🔥 Website Thumbnail -->
+  <link rel="icon" type="image/png" href="photo.png">
 
   <!-- 🔥 Social Media Preview -->
   <meta property="og:title" content="Marikina Evangelical Reform Church">
-  <meta property="og:description" content="A Christ-centered youth Church community growing in faith and love.">
-  <meta property="og:image" content="https://carlosacro207-star.github.io/merci-youth-ministry/photo.jpg">
+  <meta property="og:description" content="A Christ-centered Church community growing in faith and love.">
+  <meta property="og:image" content="https://carlosacro207-star.github.io/merci-youth-ministry/photo.png">
   <meta property="og:type" content="website">
 
   <style>
+
     html {
       scroll-behavior: smooth;
     }
@@ -41,17 +42,27 @@
 
     nav a {
       color: white;
-      margin: 0 15px;
+      margin: 0 10px;
       text-decoration: none;
       font-weight: bold;
+    }
+
+    /* 🔥 NAV BUTTON STYLE */
+    .nav-btn {
+      background: rgba(255,255,255,0.08);
+      padding: 10px 18px;
+      border-radius: 10px;
       transition: 0.3s;
+      display: inline-block;
     }
 
-    nav a:hover {
-      color: red;
+    .nav-btn:hover {
+      background: red;
+      color: white;
+      transform: translateY(-2px);
     }
 
-    /* HERO */
+    /* 🔥 HERO */
     .hero {
       min-height: 100vh;
       text-align: center;
@@ -65,6 +76,24 @@
       border-radius: 20px;
       margin-top: 20px;
       box-shadow: 0 0 20px rgba(255,0,0,0.3);
+
+      /* 🔥 FLOAT ANIMATION */
+      animation: float 3s ease-in-out infinite;
+    }
+
+    /* 🔥 IMAGE FLOAT EFFECT */
+    @keyframes float {
+      0% {
+        transform: translateY(0px);
+      }
+
+      50% {
+        transform: translateY(-10px);
+      }
+
+      100% {
+        transform: translateY(0px);
+      }
     }
 
     h1 {
@@ -89,6 +118,22 @@
       max-width: 700px;
       border-radius: 15px;
       box-shadow: 0 0 10px rgba(255, 0, 0, 0.2);
+
+      /* 🔥 FADE ANIMATION */
+      animation: fadeIn 1.5s ease;
+    }
+
+    /* 🔥 FADE EFFECT */
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
     }
 
     .verse {
@@ -129,7 +174,8 @@
       text-align: left;
     }
 
-    input, textarea {
+    input,
+    textarea {
       width: 100%;
       padding: 12px;
       margin-top: 8px;
@@ -154,7 +200,9 @@
       font-size: 12px;
     }
 
+    /* 🔥 MOBILE */
     @media (max-width: 768px) {
+
       h1 {
         font-size: 35px;
       }
@@ -164,10 +212,15 @@
       }
 
       nav a {
-        margin: 0 8px;
+        margin: 0 5px;
         font-size: 14px;
       }
+
+      .nav-btn {
+        padding: 8px 12px;
+      }
     }
+
   </style>
 </head>
 
@@ -175,14 +228,14 @@
 
   <!-- 🔥 NAVIGATION -->
   <nav>
-    <a href="#">Home</a>
-    <a href="#about">About</a>
-    <a href="#verse">Verse</a>
-    <a href="#join">Join</a>
+    <a href="#home" class="nav-btn">Home</a>
+    <a href="#about" class="nav-btn">About</a>
+    <a href="#verse" class="nav-btn">Verse</a>
+    <a href="#join" class="nav-btn">Join</a>
   </nav>
 
-  <!-- HERO -->
-  <div class="hero">
+  <!-- 🔥 HERO -->
+  <div class="hero" id="home">
 
     <h1>Marikina Evangelical Reform Church</h1>
 
@@ -191,17 +244,10 @@
     </p>
 
     <!-- 🔥 YOUR REAL PHOTO -->
-   <img
-  src="photo.png.jpg"
-  alt="MERCI Youth Ministry Fellowship"
-  style="
-    width: 90%;
-    max-width: 800px;
-    border-radius: 20px;
-    margin-top: 20px;
-    box-shadow: 0 0 20px rgba(255,0,0,0.3);
-  "
->
+    <img
+      src="photo.png"
+      alt="Church Fellowship"
+    >
 
     <br>
 
@@ -211,7 +257,7 @@
 
   </div>
 
-  <!-- ABOUT -->
+  <!-- 🔥 ABOUT -->
   <div class="section" id="about">
 
     <div class="card">
@@ -225,10 +271,11 @@
 
   </div>
 
-  <!-- BIBLE VERSE -->
+  <!-- 🔥 VERSE -->
   <div class="section" id="verse">
 
     <div class="card">
+
       <h2>📖 Bible Verse</h2>
 
       <p class="verse">
@@ -239,14 +286,16 @@
         Trust in the Lord with all your heart and lean not on your own understanding.
         In all your ways acknowledge Him, and He will make your paths straight.
       </p>
+
     </div>
 
   </div>
 
-  <!-- CONNECT -->
+  <!-- 🔥 CONNECT -->
   <div class="section">
 
     <div class="card">
+
       <h2>📺 Connect With Us</h2>
 
       <p>
@@ -254,6 +303,7 @@
           Visit our YouTube Channel
         </a>
       </p>
+
     </div>
 
   </div>
@@ -265,21 +315,33 @@
 
       <h2>🙏 Message Our Church For More Information</h2>
 
-      <!-- 🔥 REPLACE YOUR_FORM_ID -->
-    <form
-  action="https://formspree.io/f/mojbjrdy"
-  method="POST"
->
-  <label>
-    Your email:
-    <input type="email" name="email">
-  </label>
-  <label>
-    Your message:
-    <textarea name="message"></textarea>
-  </label>
-  <!-- your other form fields go here -->
-  <button type="submit">Send</button>
+      <form
+        action="https://formspree.io/f/mojbjrdy"
+        method="POST"
+      >
+
+        <label>
+          Your Email:
+          <input
+            type="email"
+            name="email"
+            placeholder="Enter your email"
+            required
+          >
+        </label>
+
+        <label>
+          Your Message:
+          <textarea
+            name="message"
+            placeholder="Tell us about yourself..."
+            required
+          ></textarea>
+        </label>
+
+        <button type="submit">
+          Send
+        </button>
 
       </form>
 
@@ -287,7 +349,7 @@
 
   </div>
 
-  <!-- FOOTER -->
+  <!-- 🔥 FOOTER -->
   <footer>
     Marikina Evangelical Reform Church © 2026 | Built by Carlo Sacro
   </footer>
