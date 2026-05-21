@@ -7,10 +7,8 @@
 
   <title>Marikina Evangelical Reform Church</title>
 
-  <!-- 🔥 Website Thumbnail -->
   <link rel="icon" type="image/png" href="photo.png">
 
-  <!-- 🔥 Social Media Preview -->
   <meta property="og:title" content="Marikina Evangelical Reform Church">
   <meta property="og:description" content="A Christ-centered Church community growing in faith and love.">
   <meta property="og:image" content="https://carlosacro207-star.github.io/merci-youth-ministry/photo.png">
@@ -27,9 +25,9 @@
       font-family: Arial, sans-serif;
       background: #0b0b0f;
       color: white;
+      overflow-x: hidden;
     }
 
-    /* 🔥 NAVBAR */
     nav {
       position: fixed;
       width: 100%;
@@ -47,7 +45,6 @@
       font-weight: bold;
     }
 
-    /* 🔥 NAV BUTTON STYLE */
     .nav-btn {
       background: rgba(255,255,255,0.08);
       padding: 10px 18px;
@@ -58,11 +55,9 @@
 
     .nav-btn:hover {
       background: red;
-      color: white;
       transform: translateY(-2px);
     }
 
-    /* 🔥 HERO */
     .hero {
       min-height: 100vh;
       text-align: center;
@@ -76,24 +71,13 @@
       border-radius: 20px;
       margin-top: 20px;
       box-shadow: 0 0 20px rgba(255,0,0,0.3);
-
-      /* 🔥 FLOAT ANIMATION */
       animation: float 3s ease-in-out infinite;
     }
 
-    /* 🔥 IMAGE FLOAT EFFECT */
     @keyframes float {
-      0% {
-        transform: translateY(0px);
-      }
-
-      50% {
-        transform: translateY(-10px);
-      }
-
-      100% {
-        transform: translateY(0px);
-      }
+      0% { transform: translateY(0px); }
+      50% { transform: translateY(-10px); }
+      100% { transform: translateY(0px); }
     }
 
     h1 {
@@ -118,28 +102,12 @@
       max-width: 700px;
       border-radius: 15px;
       box-shadow: 0 0 10px rgba(255, 0, 0, 0.2);
-
-      /* 🔥 FADE ANIMATION */
       animation: fadeIn 1.5s ease;
     }
 
-    /* 🔥 FADE EFFECT */
     @keyframes fadeIn {
-      from {
-        opacity: 0;
-        transform: translateY(20px);
-      }
-
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
-
-    .verse {
-      color: #ff4d4d;
-      font-weight: bold;
-      font-size: 20px;
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
     }
 
     button {
@@ -164,7 +132,63 @@
       text-decoration: none;
     }
 
-    /* 🔥 FORM STYLE */
+    /* =========================
+       ✨ BIBLE VERSE ANIMATION
+    ========================== */
+
+    #verse {
+      position: relative;
+      overflow: hidden;
+    }
+
+    .verse-box {
+      position: relative;
+      z-index: 2;
+      color: white;
+      padding: 40px 20px;
+      animation: fadeInVerse 2s ease-in-out;
+    }
+
+    @keyframes fadeInVerse {
+      from { opacity: 0; transform: scale(0.9); }
+      to { opacity: 1; transform: scale(1); }
+    }
+
+    .verse-text {
+      font-size: 22px;
+      font-weight: bold;
+      color: #ff4d4d;
+      text-shadow: 0 0 15px red;
+      animation: glow 2s infinite alternate;
+    }
+
+    @keyframes glow {
+      from { text-shadow: 0 0 10px red; }
+      to { text-shadow: 0 0 30px red, 0 0 60px darkred; }
+    }
+
+    .ref {
+      margin-top: 10px;
+      opacity: 0.8;
+    }
+
+    .particle {
+      position: absolute;
+      width: 6px;
+      height: 6px;
+      background: white;
+      border-radius: 50%;
+      opacity: 0.3;
+      animation: floatUp 6s infinite linear;
+      z-index: 1;
+    }
+
+    @keyframes floatUp {
+      0% { transform: translateY(100vh); opacity: 0; }
+      50% { opacity: 0.7; }
+      100% { transform: translateY(-10vh); opacity: 0; }
+    }
+
     .form-card {
       background: #1a1a22;
       padding: 25px;
@@ -174,8 +198,7 @@
       text-align: left;
     }
 
-    input,
-    textarea {
+    input, textarea {
       width: 100%;
       padding: 12px;
       margin-top: 8px;
@@ -200,33 +223,11 @@
       font-size: 12px;
     }
 
-    /* 🔥 MOBILE */
-    @media (max-width: 768px) {
-
-      h1 {
-        font-size: 35px;
-      }
-
-      .tagline {
-        font-size: 15px;
-      }
-
-      nav a {
-        margin: 0 5px;
-        font-size: 14px;
-      }
-
-      .nav-btn {
-        padding: 8px 12px;
-      }
-    }
-
   </style>
 </head>
 
 <body>
 
-  <!-- 🔥 NAVIGATION -->
   <nav>
     <a href="#home" class="nav-btn">Home</a>
     <a href="#about" class="nav-btn">About</a>
@@ -234,22 +235,12 @@
     <a href="#join" class="nav-btn">Join</a>
   </nav>
 
-  <!-- 🔥 HERO -->
   <div class="hero" id="home">
 
     <h1>Marikina Evangelical Reform Church</h1>
+    <p class="tagline">A Church that follows Christ & shares His Gospel</p>
 
-    <p class="tagline">
-      A Church that follows Christ & shares His Gospel
-    </p>
-
-    <!-- 🔥 YOUR REAL PHOTO -->
-    <img
-      src="photo.png"
-      alt="Church Fellowship"
-    >
-
-    <br>
+    <img src="photo.png" alt="Church Fellowship">
 
     <button onclick="alert('Welcome to Marikina Evangelical Reform Church! 🙏')">
       Join Us
@@ -257,102 +248,81 @@
 
   </div>
 
-  <!-- 🔥 ABOUT -->
   <div class="section" id="about">
-
     <div class="card">
       <h2>About Us</h2>
-
-      <p>
-        We are a Christ-centered Church community dedicated to faith,
-        friendship, leadership, and growing together in God's Word.
-      </p>
+      <p>We are a Christ-centered Church community dedicated to faith, friendship, leadership, and growing together in God's Word.</p>
     </div>
-
   </div>
 
-  <!-- 🔥 VERSE -->
+  <!-- VERSE (UPDATED TO YOUR EXACT BIBLE VERSE) -->
   <div class="section" id="verse">
 
-    <div class="card">
+    <div class="verse-box">
 
       <h2>📖 Bible Verse</h2>
 
-      <p class="verse">
-        Proverbs 3:5–6
-      </p>
-
-      <p>
+      <div class="verse-text">
         Trust in the Lord with all your heart and lean not on your own understanding.
+      </div>
+
+      <div>
         In all your ways acknowledge Him, and He will make your paths straight.
-      </p>
+      </div>
+
+      <div class="ref">Proverbs 3:5–6</div>
 
     </div>
 
   </div>
 
-  <!-- 🔥 CONNECT -->
   <div class="section">
-
     <div class="card">
-
       <h2>📺 Connect With Us</h2>
-
-      <p>
-        <a href="https://www.youtube.com/@marikinareformedchurch" target="_blank">
-          Visit our YouTube Channel
-        </a>
-      </p>
-
+      <a href="https://www.youtube.com/@marikinareformedchurch" target="_blank">
+        Visit our YouTube Channel
+      </a>
     </div>
-
   </div>
 
-  <!-- 🔥 JOIN FORM -->
   <div class="section" id="join">
-
     <div class="form-card">
 
-      <h2>🙏 Message Our Church For More Information</h2>
+      <h2>🙏 Message Our Church</h2>
 
-      <form
-        action="https://formspree.io/f/mojbjrdy"
-        method="POST"
-      >
+      <form action="https://formspree.io/f/mojbjrdy" method="POST">
 
-        <label>
-          Your Email:
-          <input
-            type="email"
-            name="email"
-            placeholder="Enter your email"
-            required
-          >
+        <label>Your Email:
+          <input type="email" name="email" required>
         </label>
 
-        <label>
-          Your Message:
-          <textarea
-            name="message"
-            placeholder="Tell us about yourself..."
-            required
-          ></textarea>
+        <label>Your Message:
+          <textarea name="message" required></textarea>
         </label>
 
-        <button type="submit">
-          Send
-        </button>
+        <button type="submit">Send</button>
 
       </form>
 
     </div>
-
   </div>
 
-  <!-- 🔥 FOOTER -->
   <footer>
     Marikina Evangelical Reform Church © 2026 | Built by Carlo Sacro
   </footer>
+
+  <!-- PARTICLES -->
+  <script>
+    const verseSection = document.getElementById("verse");
+
+    for (let i = 0; i < 25; i++) {
+      let p = document.createElement("div");
+      p.className = "particle";
+      p.style.left = Math.random() * 100 + "vw";
+      p.style.animationDuration = (3 + Math.random() * 5) + "s";
+      verseSection.appendChild(p);
+    }
+  </script>
 
 </body>
 </html>
